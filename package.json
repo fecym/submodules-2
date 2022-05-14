@@ -1,0 +1,21 @@
+{
+  "name": "submodules-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "lint": "npx vue-cli-service lint **/*.js **/*.vue"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint": "~5.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": ["yarn lint", "git add"]
+  }
+}
